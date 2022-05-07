@@ -80,7 +80,7 @@ const mediaQueriesSplitter = {
 
                         if (_rule.type === 'media' && _rule.media) {
                             ruleMediaMin = _rule.media.match(/\(min-width:\s*([0-9]+)px\)/);
-                            ruleMediaMax = _rule.media.match(/\(max-width:\s*([0-9]+)px\)/);
+                            ruleMediaMax = _rule.media.match(/(max-width:\s*(\d+\.*\d*)px)/);
 
                             if ((ruleMediaMin && ruleMediaMin[1]) || (ruleMediaMax && ruleMediaMax[1])) {
                                 isMediaWidthRule = true;
